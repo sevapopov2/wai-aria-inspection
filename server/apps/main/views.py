@@ -3,7 +3,7 @@
 from django.views import generic
 
 
-class IndexView(generic.DetailView):
+class IndexView(generic.TemplateView):
     """Generic view for index template."""
 
     template_name = 'main/index.html'
