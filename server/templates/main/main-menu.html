@@ -1,0 +1,19 @@
+<button id="main-menu-button" aria-label="Главное Меню" aria-controls="header-nav" aria-expanded="false">
+    <span>Menu</span>
+</button>
+
+<div id="header-nav">
+    <nav id="main-menu-block" role="navigation" aria-label="Главное меню">
+        <ul>
+            <li>
+                <a href="{% url 'main:index' %}">О проекте</a>
+            </li>
+            <li>
+                <a href="{% url 'main:good-examples' %}">Хорошие примеры ARIA</a>
+            </li>
+            <li>
+                <a href="{% url 'main:bad-examples' %}">Плохие примеры ARIA</a>
+            </li>
+        </ul>
+    </nav>
+</div>
