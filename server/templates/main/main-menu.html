@@ -1,9 +1,9 @@
-<button id="main-menu-button" aria-label="Главное Меню" aria-controls="header-nav" aria-expanded="false">
+<button type="button" id="main-menu-button" aria-label="Главное Меню" aria-controls="header-nav" aria-expanded="false">
     <span>Menu</span>
 </button>
 
 <div id="header-nav">
-    <nav id="main-menu-block" role="navigation" aria-label="Главное меню">
+    <nav id="main-menu-block" aria-labelledby="main-menu-button">
         <ul>
             <li>
                 <a href="{% url 'main:index' %}">О проекте</a>
