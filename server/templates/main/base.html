@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
 
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+    <script src="{% static 'jquery/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap/bootstrap.min.js' %}"></script>
 </head>
 
 <body>
