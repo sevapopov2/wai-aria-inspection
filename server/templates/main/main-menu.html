@@ -11,16 +11,16 @@
                 <a class="nav-link" href="{% url 'main:index' %}">О проекте</a>
             </li>
             <li class="nav-item dropdown">
-                <button class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
-                    aria-expanded="false" aria-controls="good-examples-list">Хорошие примеры ARIA</button>
+                <button class="nav-link dropdown-toggle" id="good-examples-button" data-toggle="collapse"
+                    data-target="#good-examples-list" aria-expanded="false">Хорошие примеры ARIA</button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="good-examples-list">
                     <a class="dropdown-item" href="{% url 'main:good-examples' %}">Good Example 1</a>
                     <a class="dropdown-item" href="{% url 'main:good-examples' %}">Good Example 2</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <button class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"
-                    aria-expanded="false" aria-controls="bad-examples-list">
+                <button class="nav-link dropdown-toggle" id="bad-examples-button" data-toggle="collapse"
+                    data-target="#bad-examples-list" aria-expanded="false">
                     Плохие примеры ARIA
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="bad-examples-list">
