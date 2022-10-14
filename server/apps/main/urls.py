@@ -10,6 +10,4 @@ urlpatterns = [
          name='index'),
     path('good-examples/', views.GoodExamplesIndexView.as_view(),
          name='good-examples'),
-    path('bad-examples/', views.BadExamplesIndexView.as_view(),
-         name='bad-examples')
 ]

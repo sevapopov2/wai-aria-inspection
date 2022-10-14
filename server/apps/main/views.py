@@ -13,9 +13,3 @@ class GoodExamplesIndexView(generic.TemplateView):
     """Generic good examples index view."""
 
     template_name = 'main/good-examples/index.html'
-
-
-class BadExamplesIndexView(generic.TemplateView):
-    """Generic bad examples index view."""
-
-    template_name = 'main/bad-examples/index.html'
