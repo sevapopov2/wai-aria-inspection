@@ -9,15 +9,18 @@
     Также разработчики словами могут писать "Элемент меню", что является недопустимым, поскольку для скринридера уже
     известно на семантическом уровне, с каким элементом/ролью элемента он сталкивается.
     Ниже будет приведен плохой пример меню навигации данного ресурса.</p>
-    <nav id=""bad-menu" aria-label="Меню">
-        <ul>
-            <li>
-                <a href="{% url 'main:index' %}" role="menuitem">Главная</a>
-            </li>
-            <li>
-                <a href="{% url 'main:bad-menu-example' %}" role="menuitem">Элемент меню плохой пример меню</a>
-            </li>
-        </ul>
+    <nav id="bad-menu" aria-label="Меню" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{% url 'main:index' %}" role="menuitem" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'main:bad-menu-example' %}" role="menuitem" class="nav-link">Элемент меню плохой пример меню</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+    <br>
     <p>Как мы видим, в данном примере роль ссылки перекрывается ролью menuitem, чего не должно быть. Роли menu и menuitem не должны использоваться в меню навигации.</p>
 {% endblock %}
