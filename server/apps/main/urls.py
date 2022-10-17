@@ -11,5 +11,8 @@ urlpatterns = [
     path('good-examples/', views.GoodExamplesIndexView.as_view(),
          name='good-examples'),
     path('bad-examples/menu', views.BadMenuExampleView.as_view(),
-         name='bad-menu-example')
+         name='bad-menu-example'),
+    path('bad-examples/fixing-broken-semantics',
+         views.fixingBrokenSemanticsExample.as_view(),
+         name='broken-semantics-bad-example'),
 ]

@@ -25,7 +25,9 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="bad-examples-list">
                     <a class="dropdown-item" href="{% url 'main:bad-menu-example' %}">Плохой пример меню</a>
-                    <a class="dropdown-item" href="#">Bad Example 2</a>
+                    <a class="dropdown-item" href="{% url 'main:broken-semantics-bad-example' %}">
+                        Исправление семантики при помощи ARIA
+                    </a>
                 </div>
             </li>
         </ul>
