@@ -15,4 +15,6 @@ urlpatterns = [
     path('bad-examples/fixing-broken-semantics',
          views.fixingBrokenSemanticsExample.as_view(),
          name='broken-semantics-bad-example'),
+    path('bad-examples/redundant-semantics',
+         views.RedundantSemanticsView.as_view(), name='redundant-semantics'),
 ]

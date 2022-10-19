@@ -25,3 +25,9 @@ class fixingBrokenSemanticsExample(generic.TemplateView):
     """View for fixing broken semantics with ARIA example."""
 
     template_name = 'main/bad-examples/fixing-broken-semantics.html'
+
+
+class RedundantSemanticsView(generic.TemplateView):
+    """A generic view for reduntant semantics bad example."""
+
+    template_name = 'main/bad-examples/redundant-semantics.html'
