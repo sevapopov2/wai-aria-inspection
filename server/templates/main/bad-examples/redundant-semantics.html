@@ -7,5 +7,11 @@
 </p>
 <div id="redundant-semantics-example">
     <a href="{% url 'main:index' %}" role="link">О проекте</a>
+    <button id="redundant-button-example" type="button" role="button">Click me!</button>
+    <form role="form">
+        <label for="day">День</label>
+        <input id="day" role="combobox" type="date">
+    </form>
 </div>
+<p>Несмотря на то, что в данном случае программы экранного доступа работают стандартно с такими элементами, добавлять дополнительную роль ARIA нет необходимости, так как HTML уже делает это с помощью соответствующих тегов. Также это может некорректно работать со старыми версиями программ экранного доступа.</p>
 {% endblock %}
