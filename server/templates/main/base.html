@@ -13,10 +13,15 @@
 </head>
 
 <body>
-    {% include "main/main-menu.html" %}
+    <header id="header">
+        {% include "main/main-menu.html" %}
+    </header>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
 </body>
 
 </html>
