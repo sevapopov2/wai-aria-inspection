@@ -24,8 +24,12 @@
                     Плохие примеры ARIA
                 </button>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="bad-examples-list">
-                    <a class="dropdown-item" href="{% url 'main:bad-examples' %}">Bad Example 1</a>
-                    <a class="dropdown-item" href="{% url 'main:bad-examples' %}">Bad Example 2</a>
+                    <a class="dropdown-item" href="{% url 'main:bad-menu-example' %}">Плохой пример меню</a>
+                    <a class="dropdown-item" href="{% url 'main:broken-semantics-bad-example' %}">
+                        Исправление семантики при помощи ARIA
+                    </a>
+                    <a class="dropdown-item" href="{% url 'main:redundant-semantics' %}">Добавление излишней
+                        семантики</a>
                 </div>
             </li>
         </ul>
