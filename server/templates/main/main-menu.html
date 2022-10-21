@@ -13,7 +13,7 @@
             <li class="nav-item dropdown">
                 <button class="nav-link dropdown-toggle" id="good-examples-button" data-toggle="collapse"
                     data-target="#good-examples-list" aria-expanded="false">Хорошие примеры ARIA</button>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="good-examples-list">
+                <div class="dropdown-menu" aria-labelledby="good-examples-button" id="good-examples-list">
                     <a class="dropdown-item" href="{% url 'main:good-examples' %}">Good Example 1</a>
                     <a class="dropdown-item" href="{% url 'main:good-examples' %}">Good Example 2</a>
                 </div>
@@ -23,7 +23,7 @@
                     data-target="#bad-examples-list" aria-expanded="false">
                     Плохие примеры ARIA
                 </button>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="bad-examples-list">
+                <div class="dropdown-menu" aria-labelledby="bad-examples-button" id="bad-examples-list">
                     <a class="dropdown-item" href="{% url 'main:bad-menu-example' %}">Плохой пример меню</a>
                     <a class="dropdown-item" href="{% url 'main:broken-semantics-bad-example' %}">
                         Исправление семантики при помощи ARIA
