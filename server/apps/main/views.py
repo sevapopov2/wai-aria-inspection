@@ -9,25 +9,37 @@ class IndexView(generic.TemplateView):
     template_name = 'main/index.html'
 
 
-class GoodExamplesIndexView(generic.TemplateView):
-    """Generic good examples index view."""
-
-    template_name = 'main/good-examples/index.html'
-
-
 class BadMenuExampleView(generic.TemplateView):
     """Bad menu example view."""
 
     template_name = 'main/bad-examples/menu.html'
 
 
-class fixingBrokenSemanticsExample(generic.TemplateView):
-    """View for fixing broken semantics with ARIA example."""
+class BrokenSemanticsBadExample(generic.TemplateView):
+    """View for fixing broken semantics with ARIA bad example."""
 
     template_name = 'main/bad-examples/fixing-broken-semantics.html'
 
 
-class RedundantSemanticsView(generic.TemplateView):
+class RedundantSemanticsBadExample(generic.TemplateView):
     """A generic view for reduntant semantics bad example."""
 
     template_name = 'main/bad-examples/redundant-semantics.html'
+
+
+class GoodMenuExampleView(generic.TemplateView):
+    """Good menu example generic view."""
+
+    template_name = 'main/good-examples/menu.html'
+
+
+class BrokenSemanticsGoodExample(generic.TemplateView):
+    """Fixing broken semantics generic view."""
+
+    template_name = 'main/good-examples/fixing-broken-semantics.html'
+
+
+class RedundantSemanticsGoodExample(generic.TemplateView):
+    """A generic view for fixing redundant semantics example."""
+
+    template_name = 'main/good-examples/fixing-redundant-semantics.html'

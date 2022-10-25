@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block title %}Удаление излишней семантики{% endblock %}
+{% block content %}
+<p>В примере
+    <a href="{% url 'main:redundant-semantics-bad-example' %}">Добавления излишней семантики</a>
+    рассматривалась ситуация добавления излишней роли ARIA к уже существующему элементу с нативной ролью HTML-тега.
+    Данное поведение не имеет никакой необходимости. Для старых версий программ экранного доступа излишние роли
+    элементов могут препятствовать адекватной работе.
+    Ниже будет представлен исправленный пример без излишней семантики.
+</p>
+<div id="redundant-semantics-example">
+    <a href="{% url 'main:index' %}">О проекте</a>
+    <button id="fixed-redundant-button-example" type="button">Click me!</button>
+    <form>
+        <label for="day">День</label>
+        <input id="day" type="date">
+    </form>
+</div>
+{% endblock %}
