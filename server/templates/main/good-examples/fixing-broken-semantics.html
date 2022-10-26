@@ -7,13 +7,16 @@
     приводилась ситуация, в которой семантика элемента исправлялась при помощи атрибутов ARIA. Ниже представлен
     исправленный пример, в котором использована стандартная HTML семантика.
 </p>
-<div id="broken-semantics-example">
-    <a href="#" id="my-book-link">My book</a>
-    <button id="fixed-button-example">Find with tab key and click me</button>
+<div id="fixed-semantics-example">
+    <a href="https://yandex.ru" id="yandex-link">Яндекс</a>
+    <button id="fixed-button-example" onclick="alert('Вы нажали на кнопку и она сработала.')"">Find with tab key and click
+        me</button>
 </div>
 <p>
     В данном случае, приведенные выше ссылка и кнопка будут фокуссируемы при помощи клавиши Tab. Это соответствует
     <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">критерию стандарта WCAG</a>,
     регламентирующего доступность фокуссируемых элементов.
+    В случае со ссылкой она будет также соответствовать всем правилам работы ссылки, она переходит на другую страницу и
+    фокусируема с помощью клавиатуры, как описано выше.
 </p>
 {% endblock %}
