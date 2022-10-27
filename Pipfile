@@ -9,6 +9,7 @@ python-decouple = "*"
 django-split-settings = "*"
 django-stubs-ext = "*"
 dump-env = "*"
+selenium = "*"
 
 [dev-packages]
 flake8 = "*"
