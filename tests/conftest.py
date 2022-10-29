@@ -9,6 +9,8 @@ def browser():
     """Inicializing and closing webdriver instance."""
     # Inicialize WebDriver instance
     webbrowser = selenium.webdriver.chrome()
+    # Maximize browser window
+    webbrowser.maximize_window()
     # Set up calls to wait for 10 seconds
     webbrowser.implicitly_wait(10)
     # Return webdriver instance
