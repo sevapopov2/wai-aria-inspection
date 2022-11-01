@@ -19,14 +19,14 @@ max-complexity = 10
 max-line-length = 100
 
 ignore =
-E252,  # Missing whitespace around parameter equals
+  E252,  # Missing whitespace around parameter equals
   E303,  # Too many blank lines
   E701,  # Multiple statements on one line (colon)
   E731,  # Do not assign a lambda expression
   __init__.py: F401  # Imported but unused
 
 exclude =
-.*,
+    .*,
     .vscode,
     .git,
     .gitignore,
