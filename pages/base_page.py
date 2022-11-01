@@ -7,11 +7,11 @@ from selenium.webdriver.support.wait import WebDriverWait
 class BasePage:
     """Base page class that defines all methods to work with page objects."""
 
+
     def __init__(self, browser):
         """Class constructor defining webdriver instance and wait function."""
         self.browser = browser
-        # Attention! Works only when django development server is running!
-        self.base_url = 'localhost:8000'
+
 
     def find_element_by_xpath(self, xpath,time=10):
         """Find element by xpath."""
@@ -22,3 +22,4 @@ class BasePage:
     def click_element_by_xpath(self, xpath):
         """Click earlier found by expath method."""
         self.find_element_by_xpath(xpath)
+
