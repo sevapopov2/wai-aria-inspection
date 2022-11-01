@@ -9,7 +9,7 @@ application-import-names = pages, server, tests
 import-order-style = google
 
 # Setup flake8-quotes
-docstring-quotes = '
+docstring-quotes = "
 avoid-escape = False
 
 # Other options:
