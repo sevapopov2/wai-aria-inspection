@@ -14,10 +14,13 @@
                 <button class="nav-link dropdown-toggle" id="good-examples-button" data-toggle="collapse"
                     data-target="#good-examples-list" aria-expanded="false">Хорошие примеры ARIA</button>
                 <div class="dropdown-menu" aria-labelledby="good-examples-button" id="good-examples-list">
-                    <a class="dropdown-item" href="{% url 'main:good-menu-example' %}">Хороший Пример Меню</a>
-                    <a class="dropdown-item" href="{% url 'main:broken-semantics-good-example' %}">Исправление семантики
+                    <a class="dropdown-item" href="{% url 'main:good-menu-example' %}" id="good-example-1">Хороший
+                        Пример Меню</a>
+                    <a class="dropdown-item" href="{% url 'main:broken-semantics-good-example' %}"
+                        id="good-example-2">Исправление семантики
                         при помощи HTML</a>
-                    <a class="dropdown-item" href="{% url 'main:redundant-semantics-good-example' %}">Удаление излишней
+                    <a class="dropdown-item" href="{% url 'main:redundant-semantics-good-example' %}"
+                        id="good-example-3">Удаление излишней
                         семантики</a>
                 </div>
             </li>
@@ -27,11 +30,13 @@
                     Плохие примеры ARIA
                 </button>
                 <div class="dropdown-menu" aria-labelledby="bad-examples-button" id="bad-examples-list">
-                    <a class="dropdown-item" href="{% url 'main:bad-menu-example' %}">Плохой пример меню</a>
-                    <a class="dropdown-item" href="{% url 'main:broken-semantics-bad-example' %}">
+                    <a class="dropdown-item" href="{% url 'main:bad-menu-example' %}" id="bad-example-1">Плохой пример
+                        меню</a>
+                    <a class="dropdown-item" href="{% url 'main:broken-semantics-bad-example' %}" id="bad-example-2">
                         Исправление семантики при помощи ARIA
                     </a>
-                    <a class="dropdown-item" href="{% url 'main:redundant-semantics-bad-example' %}">Добавление излишней
+                    <a class="dropdown-item" href="{% url 'main:redundant-semantics-bad-example' %}"
+                        id="bad-example-3">Добавление излишней
                         семантики</a>
                 </div>
             </li>
