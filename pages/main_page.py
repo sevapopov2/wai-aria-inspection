@@ -11,6 +11,9 @@ class MainPage(BasePage):
 
     # Locators
     ABOUT_PROJECT_HEADING = "//h2[@id='about-project']"
+    # Bad examples locators
+    BAD_EXAMPLES_BUTTON = "//button[@id='bad-examples-button']"
+    GOOD_EXAMPLES_BUTTON = "//button[@id='good-examples-button']"
 
     def navigate_to_main_page(self):
         """Navigate to main page method."""
@@ -20,3 +23,6 @@ class MainPage(BasePage):
         """Find a heading with the text 'about project'."""
         about_heading = self.find_element_by_xpath(self.ABOUT_PROJECT_HEADING)
         return about_heading
+
+    def click_good_examples_button(self):
+        self.click_element_by_xpath(self.GOOD_EXAMPLES_BUTTON)
