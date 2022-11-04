@@ -1,10 +1,11 @@
 {% extends 'main/base.html' %}
 {% block title %}Хороший пример меню{% endblock %}
 {% block content %}
-<h1>Хороший пример меню</h1>
+<h1 id="good-menu-example-heading">Хороший пример меню</h1>
 <p>
     В <a href="{% url 'main:bad-menu-example' %}">Примере плохого меню</a>
-    рассматривалась часто встречающаяся ситуация, когда разработчики неправильно используют атрибуты ARIA. Ниже проиллюстрирована исправленная версия данного меню.
+    рассматривалась часто встречающаяся ситуация, когда разработчики неправильно используют атрибуты ARIA. Ниже
+    проиллюстрирована исправленная версия данного меню.
 </p>
 <nav id="bad-menu" aria-label="Меню" class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <div id="navbar">
