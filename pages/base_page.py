@@ -7,13 +7,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 class BasePage:
     """Base page class that defines all methods to work with page objects."""
 
-
     def __init__(self, browser):
         """Class constructor defining webdriver instance and wait function."""
         self.browser = browser
 
 
-    def find_element_by_xpath(self, xpath,time=10):
+    def find_element_by_xpath(self, xpath, time=10):
         """Find element by xpath."""
         return WebDriverWait(
             self.browser,
@@ -21,5 +20,4 @@ class BasePage:
 
     def click_element_by_xpath(self, xpath):
         """Click earlier found by expath method."""
-        self.find_element_by_xpath(xpath)
-
+        self.find_element_by_xpath(xpath).click()
