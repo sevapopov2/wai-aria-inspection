@@ -1,1 +1,0 @@
-"""Bad examples pages package."""

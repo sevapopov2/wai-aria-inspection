@@ -1,0 +1,1 @@
+"""Good examples pages package."""
