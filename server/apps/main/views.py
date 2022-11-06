@@ -18,7 +18,7 @@ class BadMenuExampleView(generic.TemplateView):
 class BrokenSemanticsBadExample(generic.TemplateView):
     """View for fixing broken semantics with ARIA bad example."""
 
-    template_name = 'main/bad-examples/fixing-broken-semantics.html'
+    template_name = 'main/bad-examples/broken-semantics.html'
 
 
 class RedundantSemanticsBadExample(generic.TemplateView):
