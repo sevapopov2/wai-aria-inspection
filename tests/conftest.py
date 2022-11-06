@@ -1,7 +1,7 @@
 """Setting up shared fixtures to start and quit Selenium driver."""
 
 import pytest
-from pytest_bdd import given
+from pytest_bdd import given, when
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -30,3 +30,9 @@ def load_index_page(browser):
     """Test that main page loads."""
     main_page = MainPage(browser)
     main_page.navigate_to_main_page()
+
+
+@when('user presses good examples button')
+def good_examples_button_press(browser):
+    """User presses good examples button."""
+    MainPage(browser).click_good_examples_button()

@@ -17,12 +17,6 @@ def find_about_project_heading(browser):
     assert about_heading
 
 
-@when('user presses good examples button')
-def good_examples_button_press(browser):
-    """User presses good examples button."""
-    MainPage(browser).click_good_examples_button()
-
-
 @then('user presses on good example 1 link')
 def open_good_example_1(browser):
     """Open good example 1 page."""
