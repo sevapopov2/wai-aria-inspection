@@ -36,3 +36,9 @@ def load_index_page(browser):
 def good_examples_button_press(browser):
     """User presses good examples button."""
     MainPage(browser).click_good_examples_button()
+
+
+@when('user presses bad examples button')
+def bad_examples_button_press(browser):
+    """User presses bad examples button."""
+    MainPage(browser).click_bad_examples_button()

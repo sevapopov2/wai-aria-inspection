@@ -7,7 +7,7 @@ class BadExample2(BasePage):
     """Bad example 2 class containing search locators and functions for selenium tests."""
 
     # Search locators
-    BROKEN_SEMANTICS_HEADING = "//h1[@id='broken-semantics-heading']"
+    BROKEN_SEMANTICS_HEADING = "//h1[@id='broken-semantics-aria-heading']"
 
     def is_heading_displayed(self):
         """Find and return fixed-semantics-heading."""
