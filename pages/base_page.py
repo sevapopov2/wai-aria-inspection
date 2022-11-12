@@ -10,13 +10,12 @@ class BasePage:
     def __init__(self, browser):
         """Class constructor defining webdriver instance and wait function."""
         self.browser = browser
+        self.wait = WebDriverWait(self.browser, 5)
 
 
-    def find_element_by_xpath(self, xpath, time=10):
+    def find_element_by_xpath(self, xpath):
         """Find element by xpath."""
-        return WebDriverWait(
-            self.browser,
-            time).until(EC.presence_of_element_located((By.XPATH, xpath)))
+        return self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
 
     def click_element_by_xpath(self, xpath):
         """Click earlier found by expath method."""
