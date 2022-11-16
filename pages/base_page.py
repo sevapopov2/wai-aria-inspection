@@ -12,10 +12,13 @@ class BasePage:
         self.browser = browser
         self.wait = WebDriverWait(self.browser, 5)
 
-
     def find_element_by_xpath(self, xpath):
         """Find element by xpath."""
         return self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
+
+    def find_all_elements_by_xpath(self, xpath):
+        """Return all elements found by xpath."""
+        return self.wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
 
     def click_element_by_xpath(self, xpath):
         """Click earlier found by expath method."""
