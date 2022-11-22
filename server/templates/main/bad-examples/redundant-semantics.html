@@ -7,11 +7,11 @@
     Например, добавление роли ARIA ссылка в случае, когда уже имеется нативный HTML-тег с данной ролью.
 </p>
 <div id="redundant-semantics-example">
-    <a href="{% url 'main:index' %}" role="link">О проекте</a>
-    <button id="redundant-button-example" type="button" role="button">Click me!</button>
+    <a href="{% url 'main:index' %}" id="redundant-link" role="link">О проекте</a>
+    <button id="redundant-button" type="button" role="button">Click me!</button>
     <form role="form">
         <label for="day">День</label>
-        <input id="day" role="combobox" type="date">
+        <input id="redundant-date" role="combobox" type="date">
     </form>
 </div>
 <p>Несмотря на то, что в данном случае программы экранного доступа работают стандартно с такими элементами, добавлять
