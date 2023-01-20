@@ -10,6 +10,7 @@ django-split-settings = "*"
 django-stubs-ext = "*"
 dump-env = "*"
 selenium = "*"
+gunicorn = "*"
 
 [dev-packages]
 flake8 = "*"
