@@ -5,9 +5,9 @@ from server.settings.components import config
 
 DEBUG = False
 ALLOWED_HOSTS = ('.{}'.format(config('DOMAIN_NAME')),)
-STATIC_ROOT = '/var/www-data/django/static'
+STATIC_ROOT = '/var/www/django/static'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-MEDIA_ROOT = '/var/www-data/django/media'
+MEDIA_ROOT = '/var/www/django/media'
 
 # Password validation
 _PASS = 'django.contrib.auth.password_validation'
