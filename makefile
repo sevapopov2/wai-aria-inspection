@@ -29,9 +29,9 @@ test:
 	@pipenv run pytest
 
 run-dev-server:
-	@pipenv run manage.py runserver
+	@pipenv run python manage.py runserver
 
 shell:
-	@pipenv run manage.py shell
+	@pipenv run python manage.py shell
 
 .PHONY: setup-dev setup-prod run-dev-server shell test
