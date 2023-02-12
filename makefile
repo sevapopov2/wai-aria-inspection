@@ -31,4 +31,7 @@ test:
 run-dev-server:
 	@pipenv run manage.py runserver
 
+shell:
+	@pipenv run manage.py shell
+
 .PHONY: setup-dev setup-prod run-dev-server shell test
