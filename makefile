@@ -1,4 +1,4 @@
-PYTHONPATH := $(shell pipenv --where)
+PYTHONPATH := $(shell pipenv --venv)
 
 install-dev-dependencies:
 	@pipenv check && pipenv install
