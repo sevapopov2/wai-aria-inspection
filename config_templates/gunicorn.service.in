@@ -7,7 +7,7 @@ User=admin
 Group=www-data
 WorkingDirectory=workdir
 Environment="DJANGO_ENV=production"
-ExecStart=venvpath/bin/pipenv run gunicorn \
+ExecStart=venvpath/bin/gunicorn \
 --access-logfile - \
 --workers 3 \
 --bind unix:/run/gunicorn.sock \
