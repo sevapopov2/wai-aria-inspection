@@ -1,10 +1,10 @@
 PYTHONPATH := $(shell pipenv --venv)
 
 install-dev-dependencies:
-	@pipenv check && pipenv install
+	@pipenv check && pipenv install --dev
 
 install-prod-dependencies:
-	@pipenv check && pipenv install --dev
+	@pipenv check && pipenv install
 
 install-pre-commit:
 	@pipenv run pre-commit install
