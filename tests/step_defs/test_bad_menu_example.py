@@ -23,3 +23,10 @@ def scan_for_menuitem_role(browser):
         menu_item_link_id = menu_item_link.get_attribute('id')
         menu_item_link_role = menu_item_link.get_attribute('role')
         assert False, f'{menu_item_link_role} is found in element with{menu_item_link_id} id'
+
+
+@then('user finds all elements with menuitem role')
+def find_all_menuitem_elements(browser):
+    """Find all elements with menuitem role on a page."""
+    menuitem_list = BadExample1(browser).find_all_menu_item_elements()
+    assert False, f'{len(menuitem_list)} elements with menuitem role are found.'

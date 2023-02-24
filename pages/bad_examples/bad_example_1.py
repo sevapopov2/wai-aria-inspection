@@ -20,3 +20,7 @@ class BadExample1(BasePage):
     def find_menu_item_element(self):
         """Find and return link with menuitem role."""
         return self.find_element_by_xpath(self.MENU_ITEM_ELEMENT)
+
+    def find_all_menu_item_elements(self):
+        """Find and return the list of all elements with menuitem role on a page."""
+        return self.find_all_elements_by_xpath(self.MENU_ITEM_ELEMENT)
