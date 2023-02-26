@@ -8,8 +8,8 @@ class BadExample3(BasePage):
 
     # Search locators
     REDUNDANT_SEMANTICS_HEADING = "//h1[@id='redundant-semantics-heading']"
-    REDUNDANT_LINK = "//a[@id='redundant-link']"
-    REDUNDANT_BUTTON = "//button[@id='redundant-button']"
+    REDUNDANT_LINK = "//a[@role='link']"
+    REDUNDANT_BUTTON = "//button[@role='button']"
     REDUNDANT_DATE_FIELD = "//input[@id='redundant-date']"
 
     def is_heading_displayed(self):

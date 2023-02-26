@@ -8,7 +8,7 @@ class BadExample2(BasePage):
 
     # Search locators
     BROKEN_SEMANTICS_HEADING = "//h1[@id='broken-semantics-aria-heading']"
-    BROKEN_SPAN_BUTTON = "//span[@id='broken-button-example']"
+    BROKEN_SPAN_BUTTON = "//span[@role='button']"
     BROKEN_SPAN_LINK = "//span[@role='link']"
 
     def is_heading_displayed(self):
