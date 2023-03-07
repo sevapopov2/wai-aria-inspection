@@ -4,11 +4,14 @@ from server.settings.components import config
 
 
 DEBUG = False
-ALLOWED_HOSTS = ('.{}'.format(config('DOMAIN_NAME')),)
-STATIC_ROOT = '/var/www-data/django/static'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.'
-'storage.ManifestStaticFilesStorage'
-MEDIA_ROOT = '/var/www-data/django/media'
+ALLOWED_HOSTS = [
+    config('DOMAIN_NAME'),
+    'localhost',
+]
+
+STATIC_ROOT = '/var/www/django/static'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+MEDIA_ROOT = '/var/www/django/media'
 
 # Password validation
 _PASS = 'django.contrib.auth.password_validation'
