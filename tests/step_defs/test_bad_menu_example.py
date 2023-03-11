@@ -1,6 +1,5 @@
 """Bad menu example step definitions file."""
-import pytest
-from pytest_bdd import given, scenarios, then, when
+from pytest_bdd import scenarios, then, when
 
 from pages.bad_examples.bad_example_1 import BadExample1
 from pages.main_page import MainPage

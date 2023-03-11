@@ -1,7 +1,6 @@
 """Sanity tests to make sure that everything is running."""
 
-import pytest
-from pytest_bdd import given, parsers, scenarios, then, when
+from pytest_bdd import scenarios, then
 
 from pages.bad_examples.bad_example_1 import BadExample1
 from pages.bad_examples.bad_example_2 import BadExample2

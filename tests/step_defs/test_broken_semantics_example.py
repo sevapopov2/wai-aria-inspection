@@ -1,6 +1,5 @@
 """Broken semantics bad example 2 tests."""
-import pytest
-from pytest_bdd import given, scenarios, then, when
+from pytest_bdd import scenarios, then, when
 
 from pages.bad_examples.bad_example_2 import BadExample2
 from pages.main_page import MainPage
