@@ -29,4 +29,4 @@ def scan_for_menuitem_role(browser):
 def find_all_menuitem_elements(browser):
     """Find all elements with menuitem role on a page."""
     menuitem_list = BadExample1(browser).find_all_menu_item_elements()
-    assert False, f'{len(menuitem_list)} elements with menuitem role are found.'
+    assert menuitem_list
