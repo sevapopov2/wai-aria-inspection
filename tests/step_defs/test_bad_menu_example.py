@@ -14,16 +14,6 @@ def open_bad_example_1(browser):
     MainPage(browser).open_bad_example_1()
 
 
-@then('user finds link with menuitem role')
-def scan_for_menuitem_role(browser):
-    """Find link that includes menuitem role."""
-    menu_item_link = BadExample1(browser).find_menu_item_element()
-    if menu_item_link.get_attribute('role'):
-        menu_item_link_id = menu_item_link.get_attribute('id')
-        menu_item_link_role = menu_item_link.get_attribute('role')
-        assert False, f'{menu_item_link_role} is found in element with{menu_item_link_id} id'
-
-
 @then('user finds all elements with menuitem role')
 def find_all_menuitem_elements(browser):
     """Find all elements with menuitem role on a page."""

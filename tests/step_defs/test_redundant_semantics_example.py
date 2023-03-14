@@ -20,26 +20,19 @@ def is_heading_displayed(browser):
     BadExample3(browser).is_heading_displayed()
 
 
-@then('user finds button and checks button role presence')
-def find_check_redundant_button(browser):
+@then('user finds all buttons and checks button role presence')
+def find_check_redundant_buttons(browser):
     """User finds and checks button for aria role presence."""
-    bad_example_3 = BadExample3(browser)
-    button = bad_example_3.find_redundant_button()
-    if button.get_attribute('role'):
-        button_id = button.get_attribute('id')
-        button_role = button.get_attribute('role')
-        assert False, f'{button_role} role is found in element with {button_id} id.'
+    redundant_buttons_list = BadExample3(browser).find_redundant_buttons()
+    assert redundant_buttons_list
 
 
-@then('user finds link and checks link role presence')
+@then('user finds all links and checks link role presence')
 def find_check_link(browser):
     """Find and check link for link role presence."""
     bad_example_3 = BadExample3(browser)
-    link = bad_example_3.find_redundant_link()
-    if link.get_attribute('role'):
-        link_id = link.get_attribute('id')
-        link_role = link.get_attribute('role')
-        assert False, f'{link_role} role is found in element with {link_id} id.'
+    redundant_links_list = bad_example_3.find_redundant_links()
+    assert redundant_links_list
 
 
 @then('user finds date field and checks combo box role presence')

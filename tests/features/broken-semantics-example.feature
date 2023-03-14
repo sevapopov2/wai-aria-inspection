@@ -7,10 +7,10 @@ Feature: bad semantics example testing
     When user opens bad example 2 page
     Then user checks that heading is displayed
 
-  Scenario: User finds span button with aria role
+  Scenario: User finds all span elements with button role
     When user opens bad example 2 page
-    Then user finds span button and checks aria role presence
+    Then user finds all span elements and checks button role presence
 
-  Scenario: User finds span link with aria role
+  Scenario: User finds all span elements with link role
     When user opens bad example 2 page
-    Then user finds span link and checks aria role presence
+    Then user finds all span elements and checks link role presence

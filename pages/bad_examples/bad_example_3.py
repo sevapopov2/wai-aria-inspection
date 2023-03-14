@@ -16,13 +16,13 @@ class BadExample3(BasePage):
         """Find redundant semantics heading and return it."""
         return self.find_element_by_xpath(self.REDUNDANT_SEMANTICS_HEADING)
 
-    def find_redundant_link(self):
-        """Find a link and detect if it has a link role."""
-        return self.find_element_by_xpath(self.REDUNDANT_LINK)
+    def find_redundant_links(self):
+        """Find all links and detect if they have a link role."""
+        return self.find_all_elements_by_xpath(self.REDUNDANT_LINK)
 
-    def find_redundant_button(self):
-        """Find a button and detect if it has aria role."""
-        return self.find_element_by_xpath(self.REDUNDANT_BUTTON)
+    def find_redundant_buttons(self):
+        """Find all buttons and detect if they have button role."""
+        return self.find_all_elements_by_xpath(self.REDUNDANT_BUTTON)
 
     def find_redundant_date_field(self):
         """Find a date field and detect if it has aria role."""

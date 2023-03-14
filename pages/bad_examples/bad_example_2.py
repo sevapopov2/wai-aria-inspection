@@ -15,10 +15,10 @@ class BadExample2(BasePage):
         """Find and return broken-semantics-heading."""
         return self.find_element_by_xpath(self.BROKEN_SEMANTICS_HEADING)
 
-    def find_broken_button(self):
-        """Find span tag with role button attribute."""
-        return self.find_element_by_xpath(self.BROKEN_SPAN_BUTTON)
+    def find_broken_buttons(self):
+        """Find all span tags with button role."""
+        return self.find_all_elements_by_xpath(self.BROKEN_SPAN_BUTTON)
 
-    def find_broken_link(self):
-        """Find span with role link."""
-        return self.find_element_by_xpath(self.BROKEN_SPAN_LINK)
+    def find_broken_links(self):
+        """Find all span tags with link role."""
+        return self.find_all_elements_by_xpath(self.BROKEN_SPAN_LINK)

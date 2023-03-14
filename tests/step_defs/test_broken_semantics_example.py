@@ -20,23 +20,15 @@ def is_heading_displayed(browser):
     BadExample2(browser).is_heading_displayed()
 
 
-@then('user finds span button and checks aria role presence')
-def find_check_span_button(browser):
-    """User finds and checks span button for aria role presence."""
-    bad_example_2 = BadExample2(browser)
-    broken_button = bad_example_2.find_broken_button()
-    if broken_button.get_attribute('role'):
-        broken_button_id = broken_button.get_attribute('id')
-        broken_button_role = broken_button.get_attribute('role')
-        assert False, f'{broken_button_role} role is found in element with {broken_button_id} id.'
+@then('user finds all span elements and checks button role presence')
+def find_check_span_buttons(browser):
+    """User finds and checks all span elements for button role presence."""
+    broken_buttons_list = BadExample2(browser).find_broken_buttons()
+    assert broken_buttons_list
 
 
-@then('user finds span link and checks aria role presence')
-def find_check_span_link(browser):
-    """Find and check span link for aria role presence."""
-    bad_example_2 = BadExample2(browser)
-    broken_link = bad_example_2.find_broken_link()
-    if broken_link.get_attribute('role'):
-        broken_link_id = broken_link.get_attribute('id')
-        broken_link_role = broken_link.get_attribute('role')
-        assert False, f'{broken_link_role} role is found in element with {broken_link_id} id.'
+@then('user finds all span elements and checks link role presence')
+def find_check_span_links(browser):
+    """Find and check all span links for aria role presence."""
+    broken_links_list = BadExample2(browser).find_broken_links()
+    assert broken_links_list
