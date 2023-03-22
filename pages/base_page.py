@@ -21,10 +21,13 @@ class BasePage:
         items_list = self.wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
         if len(items_list) > 0:
             print(len(items_list), 'items are found.')
-            print("Listing items' roles and ids.")
+            print("Listing items' parameters.")
             for item in items_list:
-                print(item.get_attribute('role'))
-                print(item.get_attribute('id'))
+                print('Tag: ', item.tag_name)
+                print('Role: ', item.get_attribute('role'))
+                if item.get_attribute('id'):
+                    print('Id: ', item.get_attribute('id'))
+                print('Text: ', item.text)
             return False
         elif len(items_list) == 0:
             print('No bad items are found. Test passed.')
