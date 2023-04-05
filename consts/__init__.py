@@ -1,0 +1,1 @@
+"""Consts variables class package."""

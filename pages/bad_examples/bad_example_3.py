@@ -1,5 +1,7 @@
 """bad example 3 class."""
 
+from consts.consts import Consts
+
 from pages.base_page import BasePage
 
 
@@ -8,9 +10,7 @@ class BadExample3(BasePage):
 
     # Search locators
     REDUNDANT_SEMANTICS_HEADING = "//h1[@id='redundant-semantics-heading']"
-    REDUNDANT_LINK = "//a[@role='link']"
-    REDUNDANT_BUTTON = "//button[@role='button']"
-    REDUNDANT_DATE_FIELD = "//input[@id='redundant-date']"
+
 
     def is_heading_displayed(self):
         """Find redundant semantics heading and return it."""
@@ -18,12 +18,12 @@ class BadExample3(BasePage):
 
     def find_redundant_links(self):
         """Find all links and detect if they have a link role."""
-        return self.find_all_elements_by_xpath(self.REDUNDANT_LINK)
+        return self.find_all_elements_by_xpath(Consts.REDUNDANT_LINK)
 
     def find_redundant_buttons(self):
         """Find all buttons and detect if they have button role."""
-        return self.find_all_elements_by_xpath(self.REDUNDANT_BUTTON)
+        return self.find_all_elements_by_xpath(Consts.REDUNDANT_BUTTON)
 
     def find_redundant_date_field(self):
         """Find a date field and detect if it has aria role."""
-        return self.find_element_by_xpath(self.REDUNDANT_DATE_FIELD)
+        return self.find_element_by_xpath(Consts.REDUNDANT_DATE_FIELD)

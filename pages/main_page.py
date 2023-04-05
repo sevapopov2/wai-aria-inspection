@@ -1,5 +1,7 @@
 """Main page class."""
 
+from consts.consts import Consts
+
 from pages.bad_examples.bad_example_1 import BadExample1
 from pages.bad_examples.bad_example_2 import BadExample2
 from pages.bad_examples.bad_example_3 import BadExample3
@@ -30,7 +32,7 @@ class MainPage(BasePage):
 
     def navigate_to_main_page(self):
         """Navigate to main page method."""
-        self.browser.get(self.BASE_URL)
+        self.browser.get(Consts.TEST_URLS['base_url'])
 
     def find_about_project_heading(self):
         """Find a heading with the text 'about project'."""

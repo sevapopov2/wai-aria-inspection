@@ -1,5 +1,7 @@
 """Bad example 2 class."""
 
+from consts.consts import Consts
+
 from pages.base_page import BasePage
 
 
@@ -8,8 +10,7 @@ class BadExample2(BasePage):
 
     # Search locators
     BROKEN_SEMANTICS_HEADING = "//h1[@id='broken-semantics-aria-heading']"
-    BROKEN_SPAN_BUTTON = "//span[@role='button']"
-    BROKEN_SPAN_LINK = "//span[@role='link']"
+
 
     def is_heading_displayed(self):
         """Find and return broken-semantics-heading."""
@@ -17,8 +18,8 @@ class BadExample2(BasePage):
 
     def find_broken_buttons(self):
         """Find all span tags with button role."""
-        return self.find_all_elements_by_xpath(self.BROKEN_SPAN_BUTTON)
+        return self.find_all_elements_by_xpath(Consts.BROKEN_SPAN_BUTTON)
 
     def find_broken_links(self):
         """Find all span tags with link role."""
-        return self.find_all_elements_by_xpath(self.BROKEN_SPAN_LINK)
+        return self.find_all_elements_by_xpath(Consts.BROKEN_SPAN_LINK)
