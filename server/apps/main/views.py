@@ -27,6 +27,12 @@ class RedundantSemanticsBadExample(generic.TemplateView):
     template_name = 'main/bad-examples/redundant-semantics.html'
 
 
+class TabindexBadExample(generic.TemplateView):
+    """Bad examples tabindex generic view."""
+
+    template_name = 'main/bad-examples/tabindex.html'
+
+
 class GoodMenuExampleView(generic.TemplateView):
     """Good menu example generic view."""
 

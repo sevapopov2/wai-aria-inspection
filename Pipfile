@@ -12,6 +12,7 @@ dump-env = "*"
 selenium = "*"
 gunicorn = "*"
 bcrypt = "*"
+pytz = "*"
 
 [dev-packages]
 flake8 = "*"

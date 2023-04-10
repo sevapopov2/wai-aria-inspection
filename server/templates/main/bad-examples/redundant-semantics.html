@@ -2,9 +2,10 @@
 {% block title %}Добавление излишней семантики{% endblock %}
 {% block content %}
 <h1 id="redundant-semantics-heading">Добавление излишней семантики</h1>
-<p>Существует практика, когда разработчики добавляют излишнюю семантику к элементу в надежде, что это улучшить
+<h2>Пример и объяснение проблемы</h2>
+<p>Существует практика, когда разработчики добавляют излишнюю семантику к элементу в надежде, что это улучшит
     доступность.
-    Например, добавление роли ARIA ссылка в случае, когда уже имеется нативный HTML-тег с данной ролью.
+    Например, добавление роли ARIA к элементу в случае, когда уже имеется нативный HTML-тег с данной ролью, сообщающий ассистивным технологиям правильную семантику.
 </p>
 <div id="redundant-semantics-example">
     <a href="{% url 'main:index' %}" id="redundant-link" role="link">О проекте</a>
@@ -14,6 +15,20 @@
         <input id="redundant-date" role="combobox" type="date">
     </form>
 </div>
+<h2>Исходный код примера</h2>
+<pre>
+    <code>
+        &lt;div id=&quot;redundant-semantics-example&quot;&gt;
+            &lt;a href=&quot;&#123;% url &apos;main:index&apos; %&#125;&quot; id=&quot;redundant-link&quot; role=&quot;link&quot;&gt;&Ocy; &pcy;&rcy;&ocy;&iecy;&kcy;&tcy;&iecy;&lt;/a&gt;
+            &lt;button id=&quot;redundant-button&quot; type=&quot;button&quot; role=&quot;button&quot;&gt;Click me!&lt;/button&gt;
+            &lt;form role=&quot;form&quot;&gt;
+                &lt;label for=&quot;day&quot;&gt;&Dcy;&iecy;&ncy;&softcy;&lt;/label&gt;
+                &lt;input id=&quot;redundant-date&quot; role=&quot;combobox&quot; type=&quot;date&quot;&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+<h2>Возможное решение проблемы</h2>
 <p>Несмотря на то, что в данном случае программы экранного доступа работают стандартно с такими элементами, добавлять
     дополнительную роль ARIA нет необходимости, так как HTML уже делает это с помощью соответствующих тегов. Также это
     может некорректно работать со старыми версиями программ экранного доступа.</p>

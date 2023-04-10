@@ -23,5 +23,7 @@ urlpatterns = [
          name='broken-semantics-good-example'),
     path('good-examples/redundant-semantics',
          views.RedundantSemanticsGoodExample.as_view(),
-         name='redundant-semantics-good-example')
+         name='redundant-semantics-good-example'),
+    path('bad-examples/tabindex-bad-example', views.TabindexBadExample.as_view(),
+         name='tabindex-bad-example')
 ]
