@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% block title %}Неправильное использование атрибута aria-hidden{% endblock %}
+{% block content %}
+<h1>Неправильное использование атрибута aria-hidden</h1>
+<h2>Объяснение проблемы и пример</h2>
+<p>В спецификации WAI-ARIA существует атрибут "aria-hidden", предназначенный для скрытия элемента, не являющегося важным
+    для пользователя программы экранного доступа. При использовании данного атрибута элемент не отображается в дереве
+    API доступности, что делает его невидимым для скринридера, однако зрячий пользователь сможет без затруднений
+    взаимодействовать с данным элементом.</p>
+<div id="aria-hidden-example" aria-hidden="true">
+    <label for="yourname">Ваше имя</label>
+    <input type="text" id="yourname" name="yourname">
+    <br>
+    <label for="youremail">Ваш email</label>
+    <input type="email" id="youremail" name="youremail">
+    <br>
+    <button type="submit">Отправить</button>
+</div>
+<p>В данном примере атрибут aria-hidden применён ко всему div региону, что полностью скрывает все его элементы от
+    пользователя программы экранного доступа. Пользователь не сможет переместиться к редакторам или кнопке при помощи клавиш быстрой навигации, при навигации с помощью клавиши Tab он услышит слово "Пусто".</p>
+    <h2>Исходный код примера</h2>
+    <pre>
+        <code>
+            &lt;div id=&quot;aria-hidden-example&quot; aria-hidden=&quot;true&quot;&gt;
+                &lt;label for=&quot;yourname&quot;&gt;&Vcy;&acy;&shcy;&iecy; &icy;&mcy;&yacy;&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;yourname&quot; name=&quot;yourname&quot;&gt;
+                &lt;br&gt;
+                &lt;label for=&quot;youremail&quot;&gt;&Vcy;&acy;&shcy; email&lt;/label&gt;
+                &lt;input type=&quot;email&quot; id=&quot;youremail&quot; name=&quot;youremail&quot;&gt;
+                &lt;br&gt;
+                &lt;button type=&quot;submit&quot;&gt;&Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;&lt;/button&gt;
+            &lt;/div&gt;
+        </code>
+    </pre>
+<h2>Возможное решение проблемы</h2>
+<p>Атрибут "aria-hidden" стоит применять на элементах, которые не имеют значения для пользователя программы экранного доступа. Это могут быть декоративные изображения, повторяющийся текст. Данный атрибут ненужно применять на фокуссируемых элементах (кнопки, ссылки, флажки, редакторы, радиокнопки).</p>
+<p>Существуют примеры, в которых данный атрибут используется ошибочно, скрывая важные для пользователя элементы и даже
+    области. Такой пример можно встретить в системе ведения отчетов об ошибках
+    <a href="https://www.atlassian.com › software › jira">Jira</a>
+    При редактировании созданного отчета об ошибке на всей области редактирования установлен атрибут "aria-hidden", что
+    не позволяет незрячему пользователю перейти к редактированию отчета.
+</p>
+{% endblock %}
