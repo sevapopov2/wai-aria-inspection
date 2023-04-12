@@ -25,5 +25,7 @@ urlpatterns = [
          views.RedundantSemanticsGoodExample.as_view(),
          name='redundant-semantics-good-example'),
     path('bad-examples/tabindex-bad-example', views.TabindexBadExample.as_view(),
-         name='tabindex-bad-example')
+         name='tabindex-bad-example'),
+    path('bad-examples/aria-hidden-bad-example',
+         views.AriaHiddenBadExample.as_view(), name='aria-hidden-bad-example')
 ]

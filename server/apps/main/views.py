@@ -33,6 +33,12 @@ class TabindexBadExample(generic.TemplateView):
     template_name = 'main/bad-examples/tabindex.html'
 
 
+class AriaHiddenBadExample(generic.TemplateView):
+    """Aria hidden bad example view."""
+
+    template_name = 'main/bad-examples/aria-hidden.html'
+
+
 class GoodMenuExampleView(generic.TemplateView):
     """Good menu example generic view."""
 
