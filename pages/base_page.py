@@ -19,6 +19,11 @@ class BasePage:
     def find_all_elements_by_xpath(self, xpath):
         """Return all elements found by xpath."""
         items_list = self.wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
+        # Debug why method doesn't work with some test cases
+        print(len(items_list))
+        if len(items_list) == 0:
+            print('No bad items are found. Test passed.')
+            return True
         if len(items_list) > 0:
             print(len(items_list), 'items are found.')
             print("Listing items' parameters.")
@@ -29,9 +34,6 @@ class BasePage:
                     print('Id: ', item.get_attribute('id'))
                 print('Text: ', item.text)
             return False
-        elif len(items_list) == 0:
-            print('No bad items are found. Test passed.')
-            return True
 
     def click_element_by_xpath(self, xpath):
         """Click earlier found by expath method."""
